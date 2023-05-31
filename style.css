@@ -1,10 +1,15 @@
+html{
+  scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
     display: block;
     text-decoration: none;
-    background-color:#364250;
+    /* background-color:#364250; */
+    /* background-color: gray; */
     /* background-color: black; */
+    background-image: linear-gradient(black, rgb(112, 112, 4));
 }
 
 header{
@@ -22,6 +27,7 @@ header{
     padding-top: 100px;
     justify-content: space-around;
     padding-bottom: 40px;
+
 }
 
 .navi{
@@ -119,6 +125,7 @@ main{
 .partidas{
     display: flex;
     align-items: center;
+    padding-bottom: 60px;
 
 }
 
@@ -129,15 +136,14 @@ main{
 }
 
 .bandeiras2{
-    padding-top: px;
     width: 40px;
-    height: 40px;
+    height: 30px;
     padding-left: 5px;
 }
 
 .horario{
     /* background-color: aqua; */
-    padding-left: 40px;
+    padding-left: 20px;
     padding-top: 20px;
     font-size: 25px;
 }
@@ -145,11 +151,34 @@ main{
 .descricao{
     font-size: 25px;
     margin-top: 150px;
-    justify-content: center;
-    color: antiquewhite;
-    border: solid 1px yellowgreen;
-    margin-bottom: 35px;
+    color: whitesmoke;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 80%;
+    /* -moz-box-shadow: 0px 20px 20px #86CEEB; */
+    box-shadow: 0px 1px 10px #d2e900;
+    /* background-image: linear-gradient(black, rgb(112, 112, 4)); */
+    animation: animarBorda 3s infinite;
+    
 }
+
+.texto10{
+    margin: 30px;
+    
+}
+
+/* @keyframes animarBorda{
+    0%{
+        box-shadow: 0px 1px 10px #d2e900;;
+    }
+    50%{
+        box-shadow: 0px 1px 10px #000000;
+    }
+    100%{
+        box-shadow: 0px 1px 10px #d2e900;
+    }
+} */
+
 
 .descricao2{
     display: flex;
@@ -166,21 +195,43 @@ main{
 
 footer{
     width: 100%;
-    height: auto;
+    height: 520px;
+    background-color: #1e1d23;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.redesSociais{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+h3{
+    color: #737f8d;
+    margin-bottom: -25px;
+}
+
 
 .cartas{
     display: flex;
     flex-direction: column;
-    color: #364250;
+    /* color: #364250; */
+    color: rgba(0, 0, 0, 0);
     padding-bottom: 100px;
+    padding-top: 100px;
+    
 }
 
 .cartas:hover{
     transform: scale(1.7);
     transition-duration: 600ms;
-    color: paleturquoise;
+    color: rgb(255, 255, 255);
     display: flex;
+    opacity: 100%;
 }
 
 .cartasSimple{
@@ -192,6 +243,8 @@ footer{
     margin: 0px 5px;
 }
 
+
+
 .simple{
     width: 200px;
     height: auto;
@@ -202,24 +255,47 @@ a{
     color: white;
 }
 
+.baixo{
+    margin-top: 150px;
+    /* margin-bottom: 200px; */
+    margin-bottom: 35px;
+}
+
+.textoTeam{
+    margin-top: 50px;
+    font-size: 80px;
+    margin-bottom: -150px;
+    animation: textoTeam linear infinite 9s;
+    text-transform: uppercase;
+    /* background-image: linear-gradient(black, yellow,black); */
+    background-image: linear-gradient(yellow, black, yellow);
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-background-size: 500%
+}
+
+@keyframes textoTeam{
+    0%{
+        background-position: 0% 100%;
+    }
+    50%{
+        background-position: 100% 0%;
+    }
+    100%{
+        background-position: 0% 100%;
+    }
+} 
+
+.alinPatrocinios{
+    display: flex;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.ak{
-    width: 150px;
+.aw{
+    width: 200px;
     animation: floating 6s ease-out infinite;
+    margin-top: 50px;
+   
 }
 
 @keyframes floating{
@@ -235,4 +311,41 @@ a{
     }
 }
 
+.ak{
+    width: 120px;
+    animation: floating 6s ease-out infinite;
+    margin-top: 0px;
+    
+}
 
+@keyframes floating{
+    0%{
+        transform: translateY(0);
+        rotate: (0);
+    }
+    50%{
+        transform: translateY(-50px) rotate(9deg);
+    }
+    100%{
+        transform: translateY(0) rotate(0);
+    }
+}
+.faca{
+    width: 90px;
+    animation: floating 6s ease-out infinite;
+    margin-top: 50px;
+    
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0);
+        rotate: (0);
+    }
+    50%{
+        transform: translateY(-50px) rotate(9deg);
+    }
+    100%{
+        transform: translateY(0) rotate(0);
+    }
+}
